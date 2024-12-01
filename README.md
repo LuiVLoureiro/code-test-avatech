@@ -27,6 +27,58 @@ Antes de iniciar, certifique-se de ter as seguintes ferramentas configuradas no 
   - `axios` para chamadas HTTP
 - Interface limpa e funcional para testar autenticação e acesso a dados protegidos.
 
+
+## Rotas do Backend
+
+1. **Registro de Usuário**
+   - **Método:** `POST`
+   - **Endpoint:** `/register`
+   - **Descrição:** Permite registrar novos usuários. Recebe `username` e `password` como payload.
+   - **Exemplo de Payload:**
+     ```json
+     {
+       "username": "usuario",
+       "password": "senha123"
+     }
+     ```
+
+2. **Login**
+   - **Método:** `POST`
+   - **Endpoint:** `/login`
+   - **Descrição:** Autentica o usuário e retorna um token JWT válido.
+   - **Exemplo de Payload:**
+     ```json
+     {
+       "username": "usuario",
+       "password": "senha123"
+     }
+     ```
+
+3. **Rota Protegida**
+   - **Método:** `GET`
+   - **Endpoint:** `/protected`
+   - **Descrição:** Permite acesso somente com um token JWT válido.
+   - **Exemplo de Cabeçalho:**
+     ```
+     Authorization: Bearer <seu_token_jwt>
+     ```
+
+---
+
+## Frontend
+
+A interface é **totalmente a critério do desenvolvedor**. Recomenda-se incluir:
+
+1. **Tela de Registro**
+   - Formulário para inserir `username` e `password`.
+
+2. **Tela de Login**
+   - Formulário para autenticar o usuário e armazenar o token JWT.
+
+3. **Página Protegida**
+   - Exibe conteúdo somente após autenticação bem-sucedida.
+
+---
 ---
 
 ## Critérios de Avaliação
