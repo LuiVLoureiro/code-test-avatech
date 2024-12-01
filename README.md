@@ -1,4 +1,4 @@
-# JWT Auth Test
+# Sistema de Login Simples com JWT
 
 Este projeto foi projetado para demonstrar suas habilidades em uma implementação simples de autenticação utilizando **JWT (JSON Web Token)** com backend em **Node.js** e frontend em **React**.
 
